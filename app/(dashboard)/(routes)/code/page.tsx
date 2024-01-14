@@ -36,6 +36,12 @@ const CodePage = () => {
     }
   });
 
+  type ChatCompletionToolMessageParam = {
+    role: "user" | "bot"; // Adjust as needed
+    content: string;
+    // ... other properties
+  };
+
   const isLoading = form.formState.isSubmitting;
   
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
